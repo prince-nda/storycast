@@ -1,0 +1,14 @@
+{
+  "name": "storycast",
+  "version": "1.0.0",
+  "description": "StoryCast - a 3-page accessible microsite for audio and video storytelling (vanilla HTML, Sass, no frameworks).",
+  "private": true,
+  "scripts": {
+    "build": "sass sass/main.scss css/main.css --style=expanded --source-map",
+    "build:min": "sass sass/main.scss css/main.css --style=compressed --no-source-map",
+    "watch": "sass sass/main.scss css/main.css --watch --style=expanded --source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
