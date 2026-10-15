@@ -307,12 +307,6 @@
     text-transform: uppercase;
     color: var(--color-sage);
   }
-  .eyebrow::before {
-    content: "";
-    width: 1.4375rem;
-    height: 1px;
-    background: currentColor;
-  }
 }
 @layer components {
   .button {

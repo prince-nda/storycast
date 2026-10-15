@@ -8,12 +8,5 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-sage);
-
-    &::before {
-      content: '';
-      width: 1.4375rem;
-      height: 1px;
-      background: currentColor;
-    }
   }
 }
