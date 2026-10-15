@@ -1,0 +1,61 @@
+@layer components {
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 3rem;
+    padding: 0.875rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    background: var(--color-ink);
+    color: var(--color-primary-foreground);
+    font-size: var(--text-md);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+
+    &--light {
+      background: var(--color-background);
+      color: var(--color-foreground);
+
+      &:hover {
+        background: var(--color-secondary);
+      }
+    }
+
+    &--link {
+      min-height: 0;
+      padding: 0.25rem 0;
+      background: none;
+      color: var(--color-primary);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .chip {
+    padding: 0.625rem 0.875rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-muted-foreground);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    &:hover {
+      border-color: var(--color-sage);
+      color: var(--color-sage);
+    }
+
+    &[aria-pressed='true'] {
+      background: var(--color-sage);
+      border-color: var(--color-sage);
+      color: var(--color-background);
+    }
+  }
+}

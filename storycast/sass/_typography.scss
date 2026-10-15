@@ -1,0 +1,22 @@
+// =============================================================
+// Typography tokens
+// =============================================================
+$font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+$font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+// Type scale (rem; 1rem = 16px)
+$type-scale: (
+  'xs': 0.75rem,    // 12 – labels, meta
+  'sm': 0.8125rem,  // 13
+  'md': 0.875rem,   // 14
+  'base': 1rem,     // 16 – body
+  'lg': 1.0625rem,  // 17 – story description
+  'xl': 1.125rem,   // 18 – lead paragraphs
+  '2xl': 1.3125rem, // 21 – card titles
+  '3xl': 1.6875rem, // 27 – transcript summary
+  '4xl': 2rem,      // 32 – about headings
+);
+
+$line-height-tight: 1.15;
+$line-height-body: 1.6;
+$line-height-loose: 1.85;

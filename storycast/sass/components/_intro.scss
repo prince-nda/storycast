@@ -1,0 +1,131 @@
+@use '../spacing' as s;
+
+@layer components {
+  .page-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-5);
+    padding-block: 3.25rem 2.1875rem;
+
+    &__copy {
+      display: grid;
+      gap: 0.9375rem;
+    }
+
+    &__title {
+      font-size: clamp(2.5rem, 1.6rem + 3.8vw, 3.625rem);
+      line-height: 1.15;
+
+      em {
+        font-style: normal;
+        color: var(--color-primary);
+      }
+    }
+
+    &__aside {
+      max-width: 18rem;
+      font-size: var(--text-md);
+      color: var(--color-muted-foreground);
+    }
+  }
+
+  .featured {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 26.875rem; // 430px
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--color-ink);
+    color: var(--color-background);
+
+    &__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% var(--focus-y, 50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgb(10 20 26 / 85%) 0%, rgb(10 20 26 / 40%) 45%, transparent 70%);
+    }
+
+    &__pills {
+      position: absolute;
+      z-index: 1;
+      top: 1.5625rem;
+      left: 1.75rem;
+      display: flex;
+      gap: 0.5625rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    &__pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.3125rem 0.625rem;
+      border-radius: var(--radius-sm);
+      background: var(--color-background);
+      color: var(--color-foreground);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    &__body {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-5);
+      width: 100%;
+      padding: 2rem 2.25rem;
+    }
+
+    &__copy {
+      display: grid;
+      gap: var(--space-2);
+      max-width: 38rem;
+    }
+
+    &__category {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    &__title {
+      font-size: clamp(1.9rem, 1.2rem + 2.2vw, 2.5625rem);
+    }
+
+    &__text {
+      font-size: var(--text-md);
+      line-height: 1.6;
+    }
+
+    &__meta {
+      font-size: var(--text-xs);
+    }
+
+    @include s.down('md') {
+      min-height: 23rem;
+
+      &__body {
+        padding: 1.25rem;
+      }
+    }
+  }
+}

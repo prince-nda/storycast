@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use 'colors' as c;
+@use 'typography' as t;
+@use 'spacing' as s;
+
+// Design tokens exposed as CSS custom properties.
+@layer tokens {
+  :root {
+    @each $name, $value in c.$colors {
+      --color-#{$name}: #{$value};
+    }
+    --font-display: #{t.$font-display};
+    --font-body: #{t.$font-body};
+    @each $name, $value in t.$type-scale {
+      --text-#{$name}: #{$value};
+    }
+    @each $name, $value in s.$space {
+      --space-#{$name}: #{$value};
+    }
+    --radius-sm: #{s.$radius-sm};
+    --radius-md: #{s.$radius-md};
+    --radius-lg: #{s.$radius-lg};
+    --gutter: #{s.$gutter};
+    --focus-ring: 3px solid var(--color-ring);
+  }
+
+  @include s.down('md') {
+    :root {
+      --gutter: #{s.$gutter-small};
+    }
+  }
+}

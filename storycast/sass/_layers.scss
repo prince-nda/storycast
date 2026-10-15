@@ -1,0 +1,3 @@
+// Cascade layers – declared once, first, so the order below always wins
+// over source order and specificity between layers.
+@layer reset, tokens, base, layout, components, utilities;

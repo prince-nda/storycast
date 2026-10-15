@@ -1,0 +1,44 @@
+@use 'sass:map';
+
+// =============================================================
+// Spacing, radius, layout and breakpoint tokens
+// =============================================================
+$space: (
+  '1': 0.25rem,
+  '2': 0.5rem,
+  '3': 0.75rem,
+  '4': 1rem,
+  '5': 1.5rem,
+  '6': 2rem,
+  '7': 3rem,
+  '8': 4rem,
+  '9': 6rem,
+);
+
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 8px;
+
+$container-max: 80rem;      // 1280px
+$container-detail: 62.5rem; // 1000px
+$gutter: 3.5rem;            // 56px
+$gutter-small: 1.25rem;     // 20px
+
+// Breakpoints (used with the `up` / `down` mixins)
+$breakpoints: (
+  'sm': 40rem,   // 640
+  'md': 48rem,   // 768
+  'lg': 64rem,   // 1024
+);
+
+@mixin down($name) {
+  @media (max-width: map.get($breakpoints, $name) - 0.0625rem) {
+    @content;
+  }
+}
+
+@mixin up($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}

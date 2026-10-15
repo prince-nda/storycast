@@ -1,0 +1,18 @@
+@layer components {
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 100;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-ink);
+    color: var(--color-primary-foreground);
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+
+    &:focus-visible {
+      top: 1rem;
+    }
+  }
+}

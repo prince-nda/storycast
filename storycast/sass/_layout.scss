@@ -1,0 +1,18 @@
+@use 'spacing' as s;
+
+@layer layout {
+  .container {
+    width: 100%;
+    max-width: s.$container-max;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+
+    &--detail {
+      max-width: s.$container-detail;
+    }
+  }
+
+  .page-main {
+    flex: 1;
+  }
+}

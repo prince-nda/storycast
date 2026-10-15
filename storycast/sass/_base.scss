@@ -1,0 +1,59 @@
+@use 'typography' as t;
+@use 'spacing' as s;
+
+@layer base {
+  html {
+    scroll-padding-top: 1.5rem;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: t.$line-height-body;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: t.$line-height-tight;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  // Visible keyboard focus on everything interactive (WCAG 2.4.7)
+  :focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 4px;
+    border-radius: s.$radius-sm;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

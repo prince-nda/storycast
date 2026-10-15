@@ -1,0 +1,64 @@
+@use '../spacing' as s;
+
+@layer components {
+  .site-footer {
+    margin-top: var(--space-6);
+    background: var(--color-ink);
+    color: var(--color-background);
+
+    &__inner {
+      padding-block: 2.125rem 1.75rem;
+      display: grid;
+      gap: var(--space-5);
+    }
+
+    &__top,
+    &__bottom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
+
+    &__brand {
+      font-family: var(--font-display);
+      font-size: 1.625rem;
+    }
+
+    &__tagline,
+    &__legal {
+      font-size: var(--text-xs);
+      opacity: 0.85;
+    }
+
+    &__tagline {
+      margin-top: var(--space-2);
+    }
+
+    &__bottom {
+      padding-top: 1.0625rem;
+      border-top: 1px solid rgb(250 248 241 / 20%);
+    }
+
+    &__nav {
+      display: flex;
+      gap: 1.875rem;
+      list-style: none;
+      padding: 0;
+      font-size: var(--text-xs);
+    }
+
+    &__link {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    :focus-visible {
+      outline-color: var(--color-background);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// =============================================================
+// Colour tokens  (exact values taken from the approved design)
+// Contrast pairs were checked against WCAG 2.1 AA – see README.
+// =============================================================
+$color-background: #faf8f1;          // page background
+$color-card: #fefdfa;                // cards, form fields
+$color-foreground: #112632;          // body text            (14.7:1 on background)
+$color-ink: #0c232f;                 // footer, player box
+$color-primary: #94432c;             // links, accents       (6.4:1 on background)
+$color-primary-foreground: #fdfcf9;
+$color-secondary: #e7e9db;           // light bands, audio bar
+$color-muted-foreground: #505b62;    // secondary text       (6.6:1 on background)
+$color-border: #d3cfc7;
+$color-sage: #45573d;                // eyebrows, active chip (7.4:1 on background)
+$color-ring: #923719;                // focus ring           (7.1:1 on background)
+
+$colors: (
+  'background': $color-background,
+  'card': $color-card,
+  'foreground': $color-foreground,
+  'ink': $color-ink,
+  'primary': $color-primary,
+  'primary-foreground': $color-primary-foreground,
+  'secondary': $color-secondary,
+  'muted-foreground': $color-muted-foreground,
+  'border': $color-border,
+  'sage': $color-sage,
+  'ring': $color-ring,
+);
