@@ -54,3 +54,37 @@
 
   update();
 })();
+
+/*
+ * Transcript follow-along (audio story page).
+ * Highlights the line being read, using the start/end times stored on each
+ * transcript line. Purely visual; the transcript works without JavaScript.
+ */
+(function () {
+  'use strict';
+
+  var audio = document.getElementById('story-audio');
+  var lines = Array.prototype.slice.call(document.querySelectorAll('[data-transcript] [data-start]'));
+  if (!audio || !lines.length) return;
+
+  var active = null;
+
+  function sync() {
+    var now = audio.currentTime;
+    var next = null;
+    lines.forEach(function (line) {
+      if (now >= parseFloat(line.dataset.start) && now < parseFloat(line.dataset.end)) next = line;
+    });
+    if (next === active) return;
+    if (active) active.classList.remove('is-active');
+    if (next) next.classList.add('is-active');
+    active = next;
+  }
+
+  audio.addEventListener('timeupdate', sync);
+  audio.addEventListener('seeked', sync);
+  audio.addEventListener('ended', function () {
+    if (active) active.classList.remove('is-active');
+    active = null;
+  });
+})();
