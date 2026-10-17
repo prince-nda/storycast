@@ -30,8 +30,6 @@ Built with **semantic HTML5, Sass compiled to plain CSS, and a little vanilla Ja
 
 ## Project structure
 
-## Project structure
-
 ```
 storycast/                     Repository root
 ├── index.html                 Home
