@@ -147,11 +147,11 @@ Photographs are stand-in images chosen to accompany each story; they are not tak
 
 | File | Used for | Source / photographer / licence |
 |---|---|---|
-| `where-i-come-from.jpg` | Where I Come From, featured story | _add credit_ |
-| `learning-to-fly.jpg` | Learning to Fly | _add credit_ |
-| `daddys-lessons.jpg` | Daddy's Lessons | _add credit_ |
-| `lolas-work.jpg` | Lola's Work | _add credit (the supplied copy carries a rawpixel watermark – use a licensed, unwatermarked version)_ |
-| `star-bound.jpg` | Star Bound | _add credit_ |
-| `poem-guy (1).jpg` | I Hear America Singing | _add credit_ |
-| `a-song-without-words.jpg` | A Song Without Words (video poster) | _add credit_ |
-| `studio_photo.JPG` | About page | _add credit_ |
+| `where-i-come-from.jpg` | Where I Come From, featured story | Pinterest|
+| `learning-to-fly.jpg` | Learning to Fly | Google |
+| `daddys-lessons.jpg` | Daddy's Lessons | Google |
+| `lolas-work.jpg` | Lola's Work | Pinterest |
+| `star-bound.jpg` | Star Bound | Google|
+| `poem-guy (1).jpg` | I Hear America Singing | Pinterest |
+| `a-song-without-words.jpg` | A Song Without Words (video poster) | Pinterest|
+| `studio_photo.JPG` | About page | Pinterest |
