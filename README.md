@@ -23,7 +23,7 @@ Built with **semantic HTML5, Sass compiled to plain CSS, and a little vanilla Ja
 
 ## Design links
 
-**Live site:** <https://prince-nda.github.io/storycast/>
+**Live site:** [<https://prince-nda.github.io/storycast/>](https://prince-nda.github.io/storycast/)
 - Figma wireframes: <https://www.figma.com/design/xN0TxCKxJGeBxihTukHvuS/StoryCast-Design?node-id=3-20&p=f&t=BCdSVxTZyEknq78Q-0>
 - Figma high-fidelity mockups: <https://www.figma.com/design/xN0TxCKxJGeBxihTukHvuS/StoryCast-Design?node-id=3-21&p=f&t=BCdSVxTZyEknq78Q-0>
 - Research and documentation (PDF, with sitemap and page hierarchy): [`docs/StoryCast_Research_and_Documentation.pdf`](docs/StoryCast_Research_and_Documentation.pdf)
