@@ -23,17 +23,21 @@ Built with **semantic HTML5, Sass compiled to plain CSS, and a little vanilla Ja
 
 ## Design links
 
-- Figma (sitemap, wireframes, high-fidelity mockups): <https://www.figma.com/design/xN0TxCKxJGeBxihTukHvuS/>
-- Research document (PDF): `docs/` – _add `storycast-research.pdf` here before submitting (the folder does not exist yet)_
+**Live site:** <https://prince-nda.github.io/storycast/>
+- Figma wireframes: <https://www.figma.com/design/xN0TxCKxJGeBxihTukHvuS/StoryCast-Design?node-id=3-20&p=f&t=BCdSVxTZyEknq78Q-0>
+- Figma high-fidelity mockups: <https://www.figma.com/design/xN0TxCKxJGeBxihTukHvuS/StoryCast-Design?node-id=3-21&p=f&t=BCdSVxTZyEknq78Q-0>
+- Research and documentation (PDF, with sitemap and page hierarchy): [`docs/StoryCast_Research_and_Documentation.pdf`](docs/StoryCast_Research_and_Documentation.pdf)
 
 ## Project structure
 
-The website lives in the `storycast/` folder of this repository.
+## Project structure
 
 ```
-storycast/
+storycast/                     Repository root
 ├── index.html                 Home
 ├── about.html                 About / Access
+├── README.md
+├── package.json               Sass build scripts
 ├── story/                     One HTML file per story
 │   ├── where-i-come-from.html
 │   ├── learning-to-fly.html
@@ -54,8 +58,9 @@ storycast/
 │       ├── _site-header  _site-footer  _skip-link  _eyebrow  _button
 │       ├── _intro (page intro + featured story)  _collection  _card
 │       └── _detail (story page, player, transcript)  _about
-├── css/main.css               Compiled stylesheet (committed so the site runs without a build)
+├── css/                       Compiled stylesheet (main.css, committed so the site runs without a build)
 ├── js/main.js                 Vanilla JS: Home-page filter + search, audio transcript follow-along
+├── docs/                      Research and documentation PDF (sitemap, hierarchy, design decisions)
 └── assets/
     ├── images/                Photographs (one per story + About page)
     ├── audio/                 i-hear-america-singing.mp3
@@ -82,12 +87,11 @@ storycast/
 
 The compiled CSS is committed, so you can open the site without installing anything:
 
-1. From the `storycast/` folder, open `index.html` in a browser, **or** serve the folder, for example `python3 -m http.server 8000` and visit <http://localhost:8000>.
+1. From the repository root, open `index.html` in a browser, **or** serve the folder, for example `python3 -m http.server 8000` and visit <http://localhost:8000>.
 
 To change the styles (needs Node.js):
 
 ```bash
-cd storycast
 npm install            # installs Sass, the only dev dependency
 npm run build          # compiles sass/main.scss -> css/main.css
 npm run watch          # recompiles on every save
